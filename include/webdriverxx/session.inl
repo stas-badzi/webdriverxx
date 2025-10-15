@@ -145,6 +145,42 @@ namespace webdriverxx {
 		return *this;
 	}
 
+
+#if SELENIUM_MAJOR >= 4
+	inline
+		const Session& Session::Execute(const std::string& script, const JsArgs& args) const {
+		InternalEvalJsonValue("execute/sync", script, args);
+		return *this;
+	}
+
+	template<typename T>
+	T Session::Eval(const std::string& script, const JsArgs& args) const {
+		WEBDRIVERXX_FUNCTION_CONTEXT_BEGIN()
+			T result = T();
+		InternalEval("execute/sync", script, args, result);
+		return result;
+		WEBDRIVERXX_FUNCTION_CONTEXT_END_EX(detail::Fmt()
+			<< "script: " << script
+		)
+	}
+
+	inline
+		const Session& Session::ExecuteAsync(const std::string& script, const JsArgs& args) const {
+		InternalEvalJsonValue("execute/async", script, args);
+		return *this;
+	}
+
+	template<typename T>
+	T Session::EvalAsync(const std::string& script, const JsArgs& args) const {
+		WEBDRIVERXX_FUNCTION_CONTEXT_BEGIN()
+			T result;
+		InternalEval("execute/async", script, args, result);
+		return result;
+		WEBDRIVERXX_FUNCTION_CONTEXT_END_EX(detail::Fmt()
+			<< "script: " << script
+		)
+	}
+#else
 	inline
 		const Session& Session::Execute(const std::string& script, const JsArgs& args) const {
 		InternalEvalJsonValue("execute", script, args);
@@ -178,6 +214,7 @@ namespace webdriverxx {
 			<< "script: " << script
 		)
 	}
+#endif
 
 	inline
 		const Session& Session::SetFocusToWindow(const std::string& window_handle) const {
