@@ -114,7 +114,7 @@ You need to download and run selenium-server-standalone.
 
 #### IMPORTANT NOTICE
 
-If you decide to use version selenium server version 4.0.0 and up (which is suggested), either compile with `-DSELENIUM_MAJOR:4`, or `#define SELENIUM_MAJOR 4` before including `webdriverxx.h`
+If you decide to use version selenium server version 4.0.0 and up (which is suggested), either compile with `-DSELENIUM_MAJOR=4`, or `#define SELENIUM_MAJOR 4` before including `webdriverxx.h`
 
 In some other versions you might need to initialize `WebDriver` objects with `http://localhost:4444/wd/hub` or any other url where your server is located suffixed with `/wd/hub`
 
