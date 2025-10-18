@@ -8,7 +8,7 @@ namespace webdriverxx {
 
 class By { // copyable
 public:
-        By() : strategy_("css selector"), value_(nullptr) {}
+        By() : strategy_("css selector"), value_() {}
 
 	By(const std::string& strategy, const std::string& value)
 		: strategy_(strategy)
