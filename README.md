@@ -19,7 +19,7 @@ SPECIAL THANKS
  * 2021 SrMilton ([miltonmanuelcramos@gmail.com](mailto:miltonmanuelcramos@gmail.com)), Mecanik ([Norbert.Boros@liveguard-software.com](mailto:Norbert.Boros@liveguard-software.com))
  * 2022 Mecanik ([Norbert.Boros@liveguard-software.com](mailto:Norbert.Boros@liveguard-software.com)), No-47 ([jacquessetsee34@gmail.com](mailto:jacquessetsee34@gmail.com))
  * 2024 Foxgoblin Xing ([foxgoblin@shockwest.com](mailto:foxgoblin@shockwest.com))
- * 2025 DanielAtCosmicDNA (Daniel Kaminski) ([daniel@cosmicdna.co.uk](mailto:daniel@cosmicdna.co.uk)), stas-badzi (Stanisław Badziak) ([stasbadzi@staszic.waw.pl](mailto:stasbadzi@staszic.waw.pl))
+ * 2025 DanielAtCosmicDNA (Daniel Kaminski) ([daniel@cosmicdna.co.uk](mailto:daniel@cosmicdna.co.uk))
 ## Cloning repository
 
 ```bash
@@ -49,7 +49,7 @@ sudo emerge -av dev-util/cmake sys-devel/gcc sys-devel/make net-misc/curl
 ## Compile on Linux, FreeBSD, OpenBSD
 ```bash
 mkdir build && cd build && cmake ..
-sudo make
+sudo make install
 ```
 
 ## Compile on Windows
