@@ -1,6 +1,8 @@
 #ifndef WEBDRIVERXX_H
 #define WEBDRIVERXX_H
-
+#ifndef SELENIUM_MAJOR
+#define SELENIUM_MAJOR 4
+#endif
 #include "webdriverxx/webdriver.h"
 #include "webdriverxx/browsers/chrome.h"
 #include "webdriverxx/browsers/firefox.h"
