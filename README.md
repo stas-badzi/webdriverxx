@@ -1,4 +1,3 @@
-
 # Webdriver++
 
 A C++ client library for [Selenium Webdriver](http://www.seleniumhq.org/).
@@ -122,11 +121,11 @@ Download latest OpenJDK and unpack: https://openjdk.java.net/
 
 Official Selenium server can be seen here:
 - versions from 2.39 to 4.0.0-beta-4 https://selenium-release.storage.googleapis.com/index.html
-- versions from 4.0.0 to latest >= https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-grid
+- all versions (scroll to the release that you want, click `Artifacts` and download `selenium-server-#.#.#.jar`) https://github.com/SeleniumHQ/selenium/releases
 
 Powershell
 ```powershell
-Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-grid/4.37.0/selenium-grid-4.37.0.jar"
+Invoke-WebRequest -Uri https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.36.0/selenium-server-4.36.0.jar
 ```
 
 Set the path enviroment variable to OpenJDK or move to the OpenJDK folder
@@ -154,10 +153,10 @@ sudo emerge -av virtual/jre
 
 Official Selenium server can be seen here:
 - versions from 2.39 to 4.0.0-beta-4 https://selenium-release.storage.googleapis.com/index.html
-- versions from 4.0.0 to latest >= https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-grid
+- all versions (scroll to the release that you want, click `Artifacts` and download `selenium-server-#.#.#.jar`) https://github.com/SeleniumHQ/selenium/releases
 
 ```bash
-wget https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-grid/4.37.0/selenium-grid-4.37.0.jar
+wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.36.0/selenium-server-4.36.0.jar
 ```
 
 or download from AUR (not recomended - outdated version v3.141.59-1) [here](https://aur.archlinux.org/packages/selenium-server-standalone/):
